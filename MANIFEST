@@ -1,0 +1,11 @@
+Build.PL
+Changes
+MANIFEST
+META.yml
+Makefile.PL
+README
+lib/Lingua/Gram.pm
+t/chinese-complexcase.t
+t/chinese-simplecase.t
+t/clean.t
+t/english.t
