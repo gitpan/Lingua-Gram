@@ -1,4 +1,7 @@
 package Lingua::Gram;
+{
+  $Lingua::Gram::VERSION = '0.2.0';
+}
 
 use warnings;
 use strict;
@@ -9,11 +12,7 @@ Lingua::Gram - N-Gram Alrogithm for Unicode String
 
 =head1 VERSION
 
-Version 0.01
-
-=cut
-
-our $VERSION = '0.01';
+version 0.2.0
 
 =head1 DESCRIPTION
 
@@ -25,7 +24,7 @@ This module will use Perl's regular unicode expression to cut string, and calcul
 
     my $g = Lingua::Gram->new($string);
 
-    my @unigramWords = $g->gram(1)
+    my @unigramWords = $g->gram(1);
     # OR
     my @unigramWords = $g->unigram;
 
@@ -60,9 +59,9 @@ sub _cut {
     $self->{units} = [];
 
     foreach (split /(?:\p{C}|\p{M}|\p{P}|\{S}|\p{Z})+/, $str) {
-	while (/([\p{Latin}\d]+|\S)/go) {
-	    push @{$self->{units}}, $1;
-	}
+        while (/([\p{Latin}\d]+|\S)/go) {
+            push @{$self->{units}}, $1;
+        }
     }
 }
 
@@ -84,8 +83,8 @@ sub bigram {
     my @result;
 
     for (my $i = 0; $i < $num; $i++) {
-	my $item = $units[$i] . $units[$i + 1];
-	push @result, $item;
+        my $item = $units[$i] . $units[$i + 1];
+        push @result, $item;
     }
 
     return @result;
@@ -109,8 +108,8 @@ sub gram {
     my @result;
 
     for (my $i = 0; $i < $num; $i++) {
-	my $item = join '', @units[$i .. $i + $c - 1];
-	push @result, $item;
+        my $item = join '', @units[$i .. $i + $c - 1];
+        push @result, $item;
     }
 
     return @result;
@@ -135,50 +134,13 @@ sub unigram {
 
 Gea-Suan Lin, C<< <gslin at gslin.org> >>
 
-=head1 BUGS
-
-Please report any bugs or feature requests to C<bug-lingua-gram at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Lingua-Gram>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
-
-=head1 SUPPORT
-
-You can find documentation for this module with the perldoc command.
-
-    perldoc Lingua::Gram
-
-
-You can also look for information at:
-
-=over 4
-
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Lingua-Gram>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/Lingua-Gram>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Lingua-Gram>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/Lingua-Gram/>
-
-=back
-
 =head1 LICENSE AND COPYRIGHT
 
-Copyright 2010 Gea-Suan Lin.
+Copyright 2010, 2011 Gea-Suan Lin.
 
-This program is free software; you can redistribute it and/or modify it
-under the terms of either: the GNU General Public License as published
-by the Free Software Foundation; or the Artistic License.
-
-See http://dev.perl.org/licenses/ for more information.
+This software is released under 3-clause BSD license. See
+L<http://www.opensource.org/licenses/bsd-license.php> for more
+information.
 
 =cut
 
