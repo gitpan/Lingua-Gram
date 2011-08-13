@@ -20,7 +20,7 @@ my %module_build_args = (
     'Gea-Suan Lin <gslin@gslin.org>'
   ],
   'dist_name' => 'Lingua-Gram',
-  'dist_version' => '0.2.0',
+  'dist_version' => '0.3.0',
   'license' => 'bsd',
   'module_name' => 'Lingua::Gram',
   'recommends' => {},

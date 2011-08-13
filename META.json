@@ -4,7 +4,7 @@
       "Gea-Suan Lin <gslin@gslin.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200013, CPAN::Meta::Converter version 2.112150",
+   "generated_by" : "Dist::Zilla version 4.200015, CPAN::Meta::Converter version 2.112150",
    "license" : [
       "bsd"
    ],
@@ -43,6 +43,6 @@
          "web" : "https://github.com/gslin/lingua-gram-perl"
       }
    },
-   "version" : "0.2.0"
+   "version" : "0.3.0"
 }
 

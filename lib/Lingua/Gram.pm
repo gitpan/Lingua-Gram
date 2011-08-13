@@ -1,6 +1,6 @@
 package Lingua::Gram;
 {
-  $Lingua::Gram::VERSION = '0.2.0';
+  $Lingua::Gram::VERSION = '0.3.0';
 }
 
 use warnings;
@@ -12,7 +12,7 @@ Lingua::Gram - N-Gram Alrogithm for Unicode String
 
 =head1 VERSION
 
-version 0.2.0
+version 0.3.0
 
 =head1 DESCRIPTION
 
@@ -58,7 +58,7 @@ sub _cut {
 
     $self->{units} = [];
 
-    foreach (split /(?:\p{C}|\p{M}|\p{P}|\{S}|\p{Z})+/, $str) {
+    foreach (split /(?:\p{C}|\p{M}|\p{P}|\p{S}|\p{Z})+/, $str) {
         while (/([\p{Latin}\d]+|\S)/go) {
             push @{$self->{units}}, $1;
         }

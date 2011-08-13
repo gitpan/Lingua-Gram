@@ -25,7 +25,7 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'bsd',
   'NAME' => 'Lingua::Gram',
   'PREREQ_PM' => {},
-  'VERSION' => '0.2.0',
+  'VERSION' => '0.3.0',
   'test' => {
     'TESTS' => 't/*.t'
   }
