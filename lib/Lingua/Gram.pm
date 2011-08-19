@@ -1,6 +1,6 @@
 package Lingua::Gram;
 {
-  $Lingua::Gram::VERSION = '0.3.0';
+  $Lingua::Gram::VERSION = '0.11.0';
 }
 
 use warnings;
@@ -12,7 +12,7 @@ Lingua::Gram - N-Gram Alrogithm for Unicode String
 
 =head1 VERSION
 
-version 0.3.0
+version 0.11.0
 
 =head1 DESCRIPTION
 

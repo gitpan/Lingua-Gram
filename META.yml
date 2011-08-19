@@ -19,4 +19,4 @@ name: Lingua-Gram
 resources:
   bugtracker: https://github.com/gslin/lingua-gram-perl/issues
   repository: git://github.com/gslin/lingua-gram-perl.git
-version: 0.3.0
+version: 0.11.0
